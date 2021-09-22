@@ -1,0 +1,33 @@
+from django import forms
+
+
+
+class Perguntas_Form(forms.Form):
+	RESPOSTA_CHOICES = ((5, 'Excelente'), (4, 'Ótimo'), ( 3, 'Bom'), (2, 'Regular'),(1, 'Ruim'), (0, 'Péssimo'))
+	RESPOSTA_CHOICES2 = (('Indicação médica', 'Indicação médica'), ('Indicação de família/amigos', 'Indicação de família/amigos'), ( 'Indicação de convênio', 'Indicação de convênio'), ('Localização', 'Localização'),('Outros', 'Outros'))
+	RESPOSTA_CHOICES_sn = (('Sim', 'Sim'), ('Não', 'Não'))
+	paciente = forms.CharField(label='Paciente', max_length=250)
+	quarto = forms.CharField(label='Quarto', max_length=50)
+	tria_1 = forms.ChoiceField(label='TRIAGEM --  Clareza nas informações', choices = RESPOSTA_CHOICES)
+	tria_2 = forms.ChoiceField(label='TRIAGEM --  Agilidade no atendimento', choices = RESPOSTA_CHOICES)
+	tria_3 = forms.ChoiceField(label='TRIAGEM --  Tratamento respeitoso e afetuoso', choices = RESPOSTA_CHOICES)
+	rec_1 = forms.ChoiceField(label='RECEPÇÃO --  Agilidade no atendimento', choices = RESPOSTA_CHOICES)
+	rec_2 = forms.ChoiceField(label='RECEPÇÃO --  Clareza nas informações', choices = RESPOSTA_CHOICES)
+	eqmed_1 = forms.ChoiceField(label='EQUIPE MÉDICA --  Visita médica', choices = RESPOSTA_CHOICES)
+	eqmed_2 = forms.ChoiceField(label='EQUIPE MÉDICA  --  Tratamento respeitoso e afetuoso', choices = RESPOSTA_CHOICES)
+	eqmed_3 = forms.ChoiceField(label='EQUIPE MÉDICA --  Informações precisas', choices = RESPOSTA_CHOICES)
+	eqenf_1 = forms.ChoiceField(label='EQUIPE DE ENFERMAGEM --  Clareza nas informações', choices = RESPOSTA_CHOICES)
+	eqenf_2 = forms.ChoiceField(label='EQUIPE DE ENFERMAGEM --  Segurança na assistência prestada', choices = RESPOSTA_CHOICES)
+	eqenf_3 = forms.ChoiceField(label='EQUIPE DE ENFERMAGEM --  Agilidade no atendimento', choices = RESPOSTA_CHOICES)
+	eqenf_4 = forms.ChoiceField(label='EQUIPE DE ENFERMAGEM --  Relação interpessoal com paciente/acompanhante', choices = RESPOSTA_CHOICES)
+	hig_1 = forms.ChoiceField(label='HIGIENE E LIMPEZA --  Atendimento da equipe', choices = RESPOSTA_CHOICES)
+	hig_2 = forms.ChoiceField(label='HIGIENE E LIMPEZA --  Limpeza da área comum', choices = RESPOSTA_CHOICES)
+	hig_3 = forms.ChoiceField(label='HIGIENE E LIMPEZA --  Limpeza dos quartos', choices = RESPOSTA_CHOICES)
+	hig_4 = forms.ChoiceField(label='HIGIENE E LIMPEZA --  Limpeza dos Sanitários', choices = RESPOSTA_CHOICES)
+	servi_1 = forms.ChoiceField(label='SERVIÇO --  Laboratório', choices = RESPOSTA_CHOICES)
+	servi_2 = forms.ChoiceField(label='SERVIÇO --  Radiologia', choices = RESPOSTA_CHOICES)
+	servi_3 = forms.ChoiceField(label='SERVIÇO --  Banco de Sangue', choices = RESPOSTA_CHOICES)
+	outros_1 = forms.ChoiceField(label='OUTROS --  Internet sem fio WIFI', choices = RESPOSTA_CHOICES)
+	outros_2 = forms.ChoiceField(label='OUTROS --  Estacionamento', choices = RESPOSTA_CHOICES)
+	rz_esc = forms.ChoiceField(label='RAZÃO PELA ESCOLHA DO HOSPITAL', choices = RESPOSTA_CHOICES2)
+	vol_util = forms.ChoiceField(label='VOCÊ VOLTARIA A UTLIZAR NOSSOS SERVIÇOS ', choices = RESPOSTA_CHOICES_sn)
