@@ -21,11 +21,6 @@ from SSI import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
-    path('nutri/', include('nutri.urls')),
-    path('senha/', include('painel.urls')),
-    path('pesquisa/', include('ouvidoria.urls')),
-    path('cc/', include('painelcc.urls')),
-    path('unimagem/', include('unimagem.urls')),
     path('internacao/', include('internacao.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:

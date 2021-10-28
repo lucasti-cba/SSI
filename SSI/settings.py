@@ -25,7 +25,7 @@ SECRET_KEY = '72hfpk9in8pt90thf%%%gg@4y$cah1o+7!bz%zn41q&7vkv9!9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.223.228', '192.168.223.161', '26.98.220.102','192.168.224.184', 'hsjt.ddns.net']
+ALLOWED_HOSTS = ['192.168.223.228', '192.168.223.161','intra.hsjtmt.com.br', '26.98.220.102','192.168.224.184', 'hsjt.ddns.net']
 
 
 # Application definition
@@ -133,8 +133,16 @@ USE_L10N = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = ( os.path.join(BASE_DIR, "static"),)
+
+
 MEDIA_ROOT = (
   os.path.join(BASE_DIR, 'media') #pasta media para abrigar os arquivos dos usuários
 )
 
 MEDIA_URL = '/media/' #endereço para acessar os arquivos
+
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
