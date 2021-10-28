@@ -92,7 +92,7 @@ def main():
         port="5432",
         database="SSI",
         user="SSI",
-        password="B475csdu@#")
+        password="*****")
     con.isolation_level = None
     cur = con.cursor()
     sleep(15)
