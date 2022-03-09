@@ -25,7 +25,7 @@ SECRET_KEY = '72hfpk9in8pt90thf%%%gg@4y$cah1o+7!bz%zn41q&7vkv9!9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.223.228', '192.168.223.161','intra.hsjtmt.com.br', '26.98.220.102','192.168.224.184', 'hsjt.ddns.net']
+ALLOWED_HOSTS = []
 
 
 # Application definition
